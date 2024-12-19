@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-['Poppins'] bg-gray-50 text-gray-800;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-['Playfair_Display'];
+  }
+}
+
+@layer components {
+  /* Button styles - mejora tu componente Button.tsx */
+  .btn {
+    @apply rounded-lg font-semibold transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-amber-700 text-white hover:bg-amber-800 active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300 active:scale-95;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-amber-700 text-amber-700 hover:bg-amber-50 active:scale-95;
+  }
+
+  /* Input styles - mejora tu componente Input.tsx */
+  .input-base {
+    @apply px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-amber-500;
+  }
+
+  /* Card styles - mejora tu componente ProductCard.tsx */
+  .product-card {
+    @apply bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow;
+  }
+
+  /* Menu item styles - mejora tu componente MenuItem.tsx */
+  .menu-item {
+    @apply flex gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors;
+  }
+
+  /* Navigation styles - mejora tu componente NavItem.tsx */
+  .nav-item {
+    @apply px-4 py-2 rounded-lg transition-colors;
+  }
+  
+  .nav-item-active {
+    @apply bg-amber-100 text-amber-800;
+  }
+  
+  .nav-item-inactive {
+    @apply text-gray-600 hover:bg-gray-100;
+  }
+}
+
+@layer utilities {
+  .container-custom {
+    @apply container mx-auto px-4;
+  }
+
+  .section-padding {
+    @apply py-8 md:py-12 lg:py-16;
+  }
+}
